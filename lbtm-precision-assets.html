@@ -24,9 +24,9 @@
 
     /* --- DESIGN TOKENS — PRECISION --- */
     :root {
-      --bg:          #FAFAFA;
-      --surface:     #FFFFFF;
-      --surface-alt: #F5F5F7;
+      --bg:          #F6F4F0;
+      --surface:     #FCFAF7;
+      --surface-alt: #EFEDE9;
       --fg:          #1D1D1F;
       --muted:       #555558;
       --border:      #E5E5E5;
@@ -887,7 +887,7 @@
     @media (max-width: 520px) {
       .differentials__row:first-child { grid-template-columns: 1fr; }
       .differentials__row--centered { grid-template-columns: 1fr; }
-      .differential { padding: 20px 18px; }
+      .differential { padding: 16px 14px; border-left: 3px solid var(--accent-soft); }
     }
 
     /* --- SERVICES --- */
@@ -1375,7 +1375,7 @@
       .differentials__head { margin-bottom: 16px; gap: 16px; }
       .differentials__row { gap: 6px; }
       .differential { padding: 14px 12px; gap: 4px; }
-      .differential__mark { font-size: 9px; }
+      .differential__mark { font-size: 10px; font-weight: 700; background: var(--accent-soft); display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 4px; color: var(--accent); }
       .differential__title { font-size: 14px; }
       .differential__text { font-size: 11px; }
 
@@ -1384,8 +1384,8 @@
       .service__title { font-size: 13px; margin-bottom: 2px; }
       .service__text { font-size: 11px; line-height: 1.4; }
 
-      .process__head { margin-bottom: 20px; }
-      .process__steps { gap: 16px; }
+      .process__head { margin-bottom: 12px; }
+      .process__steps { gap: 12px; }
       .process__step { padding: 0; }
       .process__num { font-size: 18px; margin-bottom: 4px; }
       .process__title { font-size: 13px; }
@@ -1393,14 +1393,15 @@
       .process__cta { margin-top: 20px; }
 
       .guarantee__seal { max-width: 110px; }
-      .guarantee__inner { gap: 20px; }
+      .guarantee__inner { gap: 20px; justify-items: center; }
       .guarantee__title { font-size: clamp(20px, 5.5vw, 26px); margin-bottom: 8px; }
       .guarantee__text { font-size: 12px; margin-bottom: 14px; }
       .guarantee__list li { font-size: 12px; gap: 8px; }
       .guarantee__list { gap: 8px; }
       .guarantee__list svg { width: 14px; height: 14px; }
 
-      .before-after__head { margin-bottom: 16px; gap: 14px; }
+      .before-after { --section-py: clamp(16px, 4vw, 24px); }
+      .before-after__head { margin-bottom: 10px; gap: 10px; }
       .ba-single__meta { font-size: 8px; padding: 3px 10px; bottom: 8px; }
       .ba-single { border-radius: 4px; }
       .ba-single__label { font-size: 8px; padding: 3px 8px; top: 8px; left: 8px; }
