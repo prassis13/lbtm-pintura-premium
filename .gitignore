@@ -1,0 +1,12 @@
+# Ferramentas de desenvolvimento OpenCode
+.opencode/
+.od-skills/
+opencodeSkillsgraphify/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+.DS_Store

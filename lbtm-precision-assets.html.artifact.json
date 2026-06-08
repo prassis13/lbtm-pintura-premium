@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "LBTM · Precision com Assets Reais",
+  "entry": "lbtm-precision-assets.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-06-07T17:43:05.567Z",
+  "updatedAt": "2026-06-07T17:43:05.578Z",
+  "sourceSkillId": "agent-browser",
+  "designSystemId": "default",
+  "metadata": {
+    "identifier": "lbtm-precision-assets",
+    "artifactType": "text/html",
+    "inferred": false
+  }
+}
