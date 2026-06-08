@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/css/style.css", "destination": "/mq41cbhb-style.css" },
-    { "source": "/", "destination": "/mq41cbh8-index.html" }
+    { "source": "/", "destination": "/lbtm-precision-assets.html" }
   ]
 }
