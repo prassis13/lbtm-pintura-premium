@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/", "destination": "/mq41cbh8-index.html" },
     { "source": "/css/style.css", "destination": "/mq41cbhb-style.css" }
   ],
   "cleanUrls": true
