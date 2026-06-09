@@ -120,11 +120,11 @@
       align-items: center;
       gap: 8px;
       font-family: var(--font-sans);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.01em;
-      padding: 14px 28px;
-      border-radius: 8px;
+      padding: 12px 22px;
+      border-radius: 6px;
       transition: all 0.25s var(--ease);
       white-space: nowrap;
       cursor: pointer;
@@ -191,6 +191,20 @@
       color: var(--fg);
     }
 
+    .nav__logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .nav__logo-sub {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      line-height: 1;
+    }
+
     .nav__logo img {
       height: 30px;
       width: auto;
@@ -212,12 +226,12 @@
     .nav__menu a:hover { color: var(--fg); }
 
     .nav__cta {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       color: #111112;
       background: var(--accent);
-      padding: 10px 20px;
-      border-radius: 10px;
+      padding: 8px 16px;
+      border-radius: 6px;
       transition: background 0.2s, transform 0.2s;
     }
     .nav__cta:hover { background: var(--accent-hover); color: #111112; transform: translateY(-1px); }
@@ -574,15 +588,16 @@
 
     .ba-single__label {
       position: absolute;
-      top: 16px;
-      left: 16px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      top: 12px;
+      left: 12px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 6px;
-      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: rgba(255,255,255,0.8);
+      opacity: 0.85;
     }
 
     .ba-single__label--antes {
@@ -614,7 +629,7 @@
     @media (max-width: 900px) {
       :root { --section-py: clamp(40px, 6vw, 56px); }
       .before-after__head { grid-template-columns: 1fr; }
-      .ba-single__label { font-size: 9px; padding: 4px 10px; top: 10px; left: 10px; }
+      .ba-single__label { font-size: 8px; padding: 3px 7px; top: 8px; left: 8px; }
       .ba-single__half:first-child { border-right-width: 1px; }
       .ba-single__meta { display: none; }
       .guarantee__seal { max-width: 160px; }
@@ -1038,11 +1053,20 @@
       max-width: 44ch;
     }
 
+    .leandro-block__title {
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      color: var(--fg);
+    }
+
     .leandro-block__text {
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 14px;
+      line-height: 1.65;
       color: var(--muted);
-      margin: 0 0 16px 0;
+      margin: 0 0 12px 0;
       max-width: 52ch;
     }
 
@@ -1415,7 +1439,7 @@
       .hero__title { margin-bottom: 8px; }
       .hero__subtitle { margin-bottom: 12px; }
       .hero__ctas { margin-bottom: 10px; gap: 8px; flex-direction: column; }
-      .hero__ctas .btn { width: 100%; justify-content: center; padding: 10px 16px; font-size: 13px; border-radius: 6px; }
+      .hero__ctas .btn { padding: 8px 14px; font-size: 12px; border-radius: 5px; }
       .hero__trust { gap: 8px; justify-content: center; flex-wrap: wrap; }
       .hero__trust span::before { width: 3px; height: 3px; }
       .hero__eyebrow { font-size: 9px; margin-bottom: 10px; gap: 8px; }
@@ -1438,6 +1462,7 @@
 
       /* --- GARANTIA — estrutura aprovada, refinada --- */
       .guarantee__seal-circle { padding: 12px 18px; gap: 10px; }
+      .guarantee__inner > .reveal { text-align: left; width: 100%; }
       .guarantee__seal-num { font-size: 28px; }
       .guarantee__seal-label { font-size: 10px; letter-spacing: 0.15em; }
       .guarantee__seal-sub { display: block; font-size: 10px; }
@@ -1457,13 +1482,13 @@
       .process__title { margin-bottom: 4px; }
       .process__text { margin: 0; max-width: 100%; }
       .process__cta { margin-top: 12px; }
-      .process__cta .btn { width: 100%; justify-content: center; padding: 10px 16px; font-size: 13px; border-radius: 6px; }
+      .process__cta .btn { padding: 8px 14px; font-size: 12px; border-radius: 5px; }
 
       /* --- DIFERENCIAIS --- */
-      .differentials__head { margin-bottom: 8px; gap: 6px; }
-      .differentials__row { gap: 6px; }
-      .differential { padding: 10px; gap: 6px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); }
-      .differential__mark { font-size: 12px; font-weight: 700; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 4px; background: var(--accent-soft); color: var(--accent); display: inline-block; }
+      .differentials__head { margin-bottom: 6px; gap: 4px; }
+      .differentials__row { gap: 5px; }
+      .differential { padding: 8px; gap: 4px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); }
+      .differential__mark { font-size: 11px; font-weight: 700; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 4px; background: var(--accent-soft); color: var(--accent); display: inline-block; }
 
       /* --- SERVIÇOS — mesma lógica visual dos Diferenciais --- */
       .services__inner { gap: 10px; }
@@ -1478,7 +1503,8 @@
       .leandro__head { margin-bottom: 8px; }
       .leandro__title { font-size: clamp(22px, 6vw, 28px); }
       .leandro-block__lead { margin-bottom: 10px; font-size: clamp(19px, 4.5vw, 22px); font-weight: 600; color: var(--fg); }
-      .leandro-block__text { margin-bottom: 8px; line-height: 1.5; opacity: 0.7; }
+      .leandro-block__title { font-size: 15px; margin-bottom: 6px; }
+      .leandro-block__text { margin-bottom: 6px; line-height: 1.5; opacity: 0.65; font-size: 13px; }
 
       /* --- BAIRROS --- */
       .bairros { --section-py: clamp(16px, 4vw, 22px); }
@@ -1489,7 +1515,7 @@
       /* --- CTA FINAL --- */
       .cta-final__eyebrow { margin-bottom: 4px; font-size: 10px; }
       .cta-final__ctas { gap: 8px; flex-direction: column; }
-      .cta-final__ctas .btn { width: 100%; justify-content: center; padding: 10px 16px; font-size: 13px; border-radius: 6px; }
+      .cta-final__ctas .btn { padding: 8px 14px; font-size: 12px; border-radius: 5px; }
       .cta-final__title { font-size: clamp(22px, 6vw, 28px); margin-bottom: 4px; }
       .cta-final__text { margin-bottom: 10px; max-width: 100%; }
 
@@ -1523,7 +1549,10 @@
     <div class="container nav__inner">
       <a href="#hero" class="nav__logo">
         <img src="assets/logo%20da%20empresa%20LBTM.png" alt="LBTM">
-        <span>LBTM</span>
+        <span class="nav__logo-text">
+          <span>LBTM</span>
+          <span class="nav__logo-sub">PINTURA</span>
+        </span>
       </a>
       <nav class="nav__menu">
         <a href="#superficies">Acabamentos</a>
@@ -1920,7 +1949,7 @@
         <div class="leandro-block leandro-block--reverse reveal">
           <div class="leandro-block__body">
             <span class="leandro-block__eyebrow">Fundador · Desde 2023</span>
-            <h3 class="leandro-block__title" style="font-family:var(--font-sans);font-weight:600;font-style:normal;font-size:clamp(20px,2.2vw,26px);">Uma empresa construída do zero, com acompanhamento real.</h3>
+            <h3 class="leandro-block__title">Uma empresa construída do zero, com acompanhamento real.</h3>
             <p class="leandro-block__text">A LBTM nasceu em 2023, na zona sul de São Paulo, com um propósito claro: oferecer serviços de manutenção e reforma que se destacassem pela qualidade, durabilidade e compromisso com o cliente. À frente do projeto, Leandro Barbieri trouxe sua experiência para a gestão administrativa e para a profissionalização da operação — transformando um trabalho de campo em uma empresa estruturada.</p>
             <p class="leandro-block__text">Hoje, a LBTM atende residências e empresas em múltiplas frentes — pintura, elétrica, marcenaria, ar-condicionado e limpeza pós-obra — sempre com equipe própria, processos definidos e o mesmo padrão de entrega do primeiro ao último serviço. Sem improviso. Sem terceirização.</p>
             <div class="leandro-block__signature">
