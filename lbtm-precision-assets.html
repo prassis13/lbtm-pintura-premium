@@ -206,15 +206,17 @@
     .nav__logo-sub {
       font-size: 7px;
       font-weight: 400;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.15em;
       color: rgba(212, 176, 76, 0.7);
       line-height: 1;
       margin-top: 2px;
     }
 
     .nav__logo img {
-      height: 34px;
+      height: auto;
       width: auto;
+      max-height: 32px;
+      max-width: 100%;
     }
 
     .nav__menu {
@@ -839,7 +841,7 @@
 
     @media (max-width: 900px) {
       .process__steps { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-      .process__step { border-left: 3px solid var(--accent); border-top: none; padding: 6px 8px; background: var(--surface); border-radius: 6px; }
+      .process__step { border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 6px; background: var(--surface); border-radius: 6px; }
       .process__text { max-width: 100%; }
     }
     @media (max-width: 520px) { .process__steps { grid-template-columns: 1fr; gap: 6px; } }
@@ -883,22 +885,31 @@
     .differential {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 8px;
+      align-items: start;
     }
 
     .differential__mark {
-      font-size: 10px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 700;
       font-feature-settings: "tnum", "lnum";
       color: var(--accent);
-      letter-spacing: 0.1em;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      display: inline-block;
     }
 
     .differential__title {
+      grid-column: 2;
       font-size: 15px;
       font-weight: 600;
       line-height: 1.25;
@@ -907,6 +918,7 @@
     }
 
     .differential__text {
+      grid-column: 2;
       font-size: 12px;
       line-height: 1.45;
       color: var(--muted);
@@ -1488,26 +1500,26 @@
       .process__head { margin-bottom: 8px; }
       .process__head .section-lead { margin-top: 4px; }
       .process__steps { gap: 6px; }
-      .process__step { padding: 6px 8px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); display: block; }
+      .process__step { padding: 6px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); display: block; }
       .process__step:last-child { grid-column: auto; max-width: 100%; justify-self: auto; }
       .process__num { font-size: 10px; font-weight: 700; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 3px; background: var(--accent-soft); color: var(--accent); display: inline-block; margin-bottom: 4px; }
-      .process__title { margin-bottom: 2px; }
-      .process__text { margin: 0; max-width: 100%; line-height: 1.35; }
+      .process__title { margin-bottom: 2px; font-size: 13px; }
+      .process__text { margin: 0; max-width: 100%; font-size: 12px; line-height: 1.35; }
       .process__cta { margin-top: 10px; }
       .process__cta .btn { padding: 8px 14px; font-size: 12px; border-radius: 5px; }
 
       /* --- DIFERENCIAIS --- */
       .differentials__head { margin-bottom: 6px; gap: 4px; }
       .differentials__row { gap: 4px; }
-      .differential { padding: 6px; gap: 2px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); }
-      .differential__mark { font-size: 10px; font-weight: 700; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 3px; background: var(--accent-soft); color: var(--accent); display: inline-block; }
-      .differential__title { font-size: 13px; }
-      .differential__text { font-size: 13px; line-height: 1.4; }
+      .differential { padding: 6px; gap: 6px; display: grid; grid-template-columns: 24px 1fr; align-items: start; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); }
+      .differential__mark { font-size: 11px; font-weight: 700; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 3px; background: var(--accent-soft); color: var(--accent); display: inline-block; }
+      .differential__title { grid-column: 2; font-size: 13px; }
+      .differential__text { grid-column: 2; font-size: 13px; line-height: 1.4; }
 
       /* --- SERVIÇOS — mesma lógica visual dos Diferenciais --- */
       .services__inner { gap: 10px; }
       .services__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
-      .service { padding: 6px; gap: 2px; grid-template-columns: 22px 1fr; border-top: none; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
+      .service { padding: 6px; gap: 6px; display: grid; grid-template-columns: 22px 1fr; align-items: start; border-top: none; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
       .service:last-child { border-bottom: none; }
       .service__num { font-size: 10px; font-weight: 700; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 3px; background: var(--accent-soft); color: var(--accent); padding-top: 0; display: inline-block; }
       .service__title { margin-bottom: 0; }
@@ -1884,10 +1896,6 @@
             <span class="eyebrow">Serviços</span>
             <h2 class="section-title">O que está <em>incluído</em>.</h2>
             <p class="section-lead">Tudo o que uma execução premium exige. Sem surpresas no orçamento.</p>
-            <a href="https://wa.me/5511955906120?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20detalhado%20de%20pintura.&utm_source=google&utm_medium=cpc&utm_campaign=pintura" class="btn btn--primary mt-32" onclick="gtag_report_conversion(this.href); return false;">
-              Solicitar Orçamento
-              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
           </div>
           <div class="services__list">
             <div class="service reveal">
