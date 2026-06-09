@@ -131,17 +131,19 @@
     }
 
     .btn--primary {
-      background: linear-gradient(145deg, #DDC05A, #C49E36);
-      color: #111112;
-      border: 1px solid rgba(255,255,240,0.15);
-      box-shadow: 0 2px 12px rgba(212, 176, 76, 0.15), inset 0 1px 0 rgba(255,255,240,0.25);
+      background: linear-gradient(145deg, #DDC05A 0%, #C49E36 100%);
+      color: #0C0C0D;
+      border: 1px solid rgba(212, 176, 76, 0.25);
+      box-shadow: 0 1px 0 rgba(255,255,240,0.3) inset, 0 2px 16px rgba(212, 176, 76, 0.12);
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
     .btn--primary:hover {
-      background: linear-gradient(145deg, #C49E36, #B8922A);
-      color: #111112;
-      border-color: rgba(255,255,240,0.25);
-      box-shadow: 0 4px 20px rgba(212, 176, 76, 0.25), inset 0 1px 0 rgba(255,255,240,0.25);
-      transform: translateY(-1px);
+      background: linear-gradient(145deg, #D4B040 0%, #B8922A 100%);
+      color: #0C0C0D;
+      border-color: rgba(212, 176, 76, 0.4);
+      box-shadow: 0 1px 0 rgba(255,255,240,0.3) inset, 0 6px 28px rgba(212, 176, 76, 0.2);
+      transform: translateY(-2px);
     }
 
     .btn--ghost {
@@ -206,7 +208,7 @@
     .nav__logo-sub {
       font-size: 7px;
       font-weight: 400;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.08em;
       color: rgba(212, 176, 76, 0.7);
       line-height: 1;
       margin-top: 2px;
@@ -236,14 +238,17 @@
 
     .nav__cta {
       font-size: 12px;
-      font-weight: 500;
-      color: #111112;
-      background: var(--accent);
+      font-weight: 600;
+      color: #0C0C0D;
+      background: linear-gradient(145deg, #DDC05A 0%, #C49E36 100%);
       padding: 8px 16px;
       border-radius: 6px;
-      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(212, 176, 76, 0.2);
+      box-shadow: 0 1px 0 rgba(255,255,240,0.25) inset, 0 2px 8px rgba(212, 176, 76, 0.1);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
-    .nav__cta:hover { background: var(--accent-hover); color: #111112; transform: translateY(-1px); }
+    .nav__cta:hover { background: linear-gradient(145deg, #D4B040 0%, #B8922A 100%); color: #0C0C0D; transform: translateY(-1px); border-color: rgba(212, 176, 76, 0.35); box-shadow: 0 1px 0 rgba(255,255,240,0.25) inset, 0 4px 16px rgba(212, 176, 76, 0.15); }
 
     @media (max-width: 820px) {
       .nav__menu { display: none; }
@@ -251,7 +256,7 @@
 
     /* --- HERO --- */
     .hero {
-      padding: 140px 0 48px;
+      padding: 140px 0 32px;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -382,7 +387,7 @@
     }
 
     @media (max-width: 900px) {
-      .hero { padding: 110px 0 32px; min-height: auto; }
+      .hero { padding: 110px 0 20px; min-height: auto; }
       .hero__inner { grid-template-columns: 1fr; }
       .hero__visual { order: -1; margin-bottom: 20px; }
       .hero__visual img { min-height: 260px; object-fit: cover; }
